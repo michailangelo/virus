@@ -8,4 +8,11 @@ public class Covid19 implements Serializable {
 
     private Cases cases;
 
+    public Country getCountry() {
+        return country;
+    }
+
+    public Cases getCases() {
+        return cases;
+    }
 }
