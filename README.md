@@ -8,6 +8,7 @@ Technologies used:
 - Spring Boot 2
 - Spring MVC
 - Spring Data / JPA
+- Thymeleaf
 - Apache Maven
 
 Data Source: https://github.com/iMEdD-Lab/open-data
