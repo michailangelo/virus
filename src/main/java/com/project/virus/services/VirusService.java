@@ -2,6 +2,8 @@
 
 package com.project.virus.services;
 
+import com.project.virus.models.Covid19Data;
+
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.List;
@@ -10,17 +12,6 @@ public interface VirusService {
 
     void fetchData() throws IOException, InterruptedException, ParseException, java.text.ParseException;
 
-    List<String> getRegionList();
+    List<Covid19Data> getDataList();
 
-    List<String> getCountyList();
-
-    List<Integer> getConfirmedCasesList();
-
-    List<Integer> getDeathsList();
-
-    List<Integer> getHospitalizedList();
-
-    List<Integer> getCriticalCasesList();
-
-    List<Integer> getRecoveredCasesList();
 }
