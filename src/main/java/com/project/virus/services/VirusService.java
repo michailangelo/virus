@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface VirusService {
 
-    void fetchData() throws IOException, InterruptedException, ParseException, java.text.ParseException;
+    void fetchData() throws IOException, InterruptedException, ParseException;
 
     List<Covid19Data> getDataList();
 
