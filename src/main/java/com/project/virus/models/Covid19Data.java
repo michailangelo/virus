@@ -8,8 +8,8 @@ public class Covid19Data implements Serializable {
 
     //TODO: CsvBindByPosition or ByName
 
-    @CsvBindByName
-    private String country;
+    //@CsvBindByName
+    //private String country;
 
     @CsvBindByName
     private String region;
@@ -31,11 +31,11 @@ public class Covid19Data implements Serializable {
 
     @CsvBindByName
     private Integer recoveredCases;
-
+/*
     public String getCountry() {
         return country;
     }
-
+*/
     public String getRegion() {
         return region;
     }

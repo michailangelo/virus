@@ -30,7 +30,7 @@ public class VirusServiceImpl implements VirusService {
 
         try (Reader reader = new BufferedReader(Files.newBufferedReader(dataLocationPath))) {
             // create csv bean reader
-            CsvToBean<Covid19Data> csvToBean = new CsvToBeanBuilder(reader)
+            CsvToBean csvToBean = new CsvToBeanBuilder(reader)
                     .withType(Covid19Data.class)
                     .withIgnoreLeadingWhiteSpace(true)
                     .build();

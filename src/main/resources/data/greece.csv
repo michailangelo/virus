@@ -1,4 +1,4 @@
-Γεωγραφικό Διαμέρισμα,Περιφέρεια,county_normalized,county,county_en,pop_11,lat,lng,Πρωτεύουσα,cases_normalized_2011,cases,hospitalized,dead,critical,recovered,notes
+region,county,county_normalized,county_gr,county_en,pop_11,lat,lng,Πρωτεύουσα,cases_normalized_2011,confirmedCases,hospitalized,deaths,criticalCases,recoveredCases,notes
 Αττική,Αττικής,ΑΓΙΟ ΟΡΟΣ,Άγιο Όρος,Mount Athos,,,,,,,,,,,
 Αττική,Αττικής,ΑΘΗΝΩΝ,Αθηνών,Athens Prefecture,2641511,37.9838,23.7275,Αθήνα,52.2,1378,,65,,,
 Στερεά Ελλάδα,Δυτικής Ελλάδας,ΑΙΤΩΛΟΑΚΑΡΝΑΝΙΑΣ,Αιτωλοακαρνανίας,Aetolia-Acarnania,210802,,,Μεσολόγγι,0.0,,,,,,
