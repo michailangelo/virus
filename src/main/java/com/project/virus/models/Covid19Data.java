@@ -63,4 +63,17 @@ public class Covid19Data implements Serializable {
     public Integer getRecoveredCases() {
         return recoveredCases;
     }
+
+    @Override
+    public String toString() {
+        return "Covid19Data{" +
+                "region='" + region + '\'' +
+                ", county='" + county + '\'' +
+                ", confirmedCases=" + confirmedCases +
+                ", deaths=" + deaths +
+                ", hospitalized=" + hospitalized +
+                ", criticalCases=" + criticalCases +
+                ", recoveredCases=" + recoveredCases +
+                '}';
+    }
 }

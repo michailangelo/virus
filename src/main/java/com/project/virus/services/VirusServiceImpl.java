@@ -4,6 +4,8 @@ import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
 import com.project.virus.models.Covid19Data;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.PostConstruct;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -25,6 +27,7 @@ public class VirusServiceImpl implements VirusService {
     }
 
     @Override
+    @PostConstruct
     public void fetchData() throws IOException, InterruptedException, ParseException {
         Path dataLocationPath = Paths.get(DATA_LOCATION);
 
