@@ -6,8 +6,6 @@ import java.io.Serializable;
 
 public class Covid19Data implements Serializable {
 
-    //TODO: CsvBindByPosition or ByName
-
     //@CsvBindByName
     //private String country;
 
