@@ -22,18 +22,7 @@ public class VirusController {
 
         List<Covid19Data> dataList = virusService.getDataList();
 
-        System.out.println("dataList: "+dataList);
-
-        for(Covid19Data i : dataList) {
-            //model.addAttribute("country", i.getCountry());
-            model.addAttribute("region", i.getRegion());
-            model.addAttribute("county", i.getCounty());
-            model.addAttribute("confirmedCases", i.getConfirmedCases());
-            model.addAttribute("deaths", i.getDeaths());
-            model.addAttribute("hospitalized", i.getHospitalized());
-            model.addAttribute("criticalCases", i.getCriticalCases());
-            model.addAttribute("recoveredCases", i.getRecoveredCases());
-        }
+        model.addAttribute("dataList", dataList);
 
         return "index";
     }
