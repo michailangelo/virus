@@ -62,7 +62,7 @@
 <div class="container">
     <div>
         <div id="topSection" class="row justify-content-md-center">
-            <h1 class="col" style="text-align: center;margin:30px; width: 100%;">Covid-19 Greek Statistics</h1>
+            <h1 class="col" style="text-align: center;margin:30px; width: 100%;">Covid-19 Dashboard</h1>
         </div>
         <div class="row justify-content-center">
             <div class="col-6 col-md-2 status-item text-danger">
@@ -72,54 +72,48 @@
             <div class="col-6 col-md-2 status-item text-secondary">
                 <h2>Deceased</h2>
                 <h3 style="margin-bottom: 0px;" th:text="${deaths}"></h3>
-                <h4>
-                    <span class="text-secondary" style="font-size: 1rem; font-weight: bold;" th:if="${nationalStatus.getDeltaDeaths() != '0'}" th:text="'[↑] ' + ${nationalStatus.getDeltaDeaths()}"></span>
-                </h4>
             </div>
             <div class="col-6 col-md-2 status-item text-success">
                 <h2>Recovered</h2>
                 <h3 style="margin-bottom: 0px;" th:text="${recoveredCases}"></h3>
-                <h4>
-                    <span class="text-success" style="font-size: 1rem; font-weight: bold;" th:if="${nationalStatus.getDeltaRecovered() != '0'}" th:text="'[↑] ' + ${nationalStatus.getDeltaRecovered()}"></span>
-                </h4>
             </div>
         </div>
     </div>
-    -->
-    <div style="height: 40px;"></div>
+</div>
+-->
     <div id="table-stats" class="table-responsive-sm">
         <table align="center" class="table table-striped table-light">
             <thead>
-            <tr>
-                <th scope="col">County</th>
-                <th scope="col">Confirmed</th>
-                <th scope="col">Deceased</th>
-                <th scope="col">Hospitalized</th>
-                <th scope="col">Critical</th>
-                <th scope="col">Recovered</th>
-            </tr>
+                <tr>
+                    <th scope="col">County</th>
+                    <th scope="col">Confirmed</th>
+                    <th scope="col">Deceased</th>
+                    <th scope="col">Hospitalized</th>
+                    <th scope="col">Critical</th>
+                    <th scope="col">Recovered</th>
+                </tr>
             </thead>
             <tbody>
-            <tr th:each="item : ${dataList}">
-                <th scope="row">
-                    <a th:text="${item.getCounty()}"></a>
-                </th>
-                <td>
-                    <span th:text="${item.getConfirmedCases()}"></span>
-                </td>
-                <td>
-                    <span th:text="${item.getDeaths()}"></span>
-                </td>
-                <td>
-                    <span th:text="${item.getHospitalized()}"></span>
-                </td>
-                <td>
-                    <span th:text="${item.getCriticalCases()}"></span>
-                </td>
-                <td>
-                    <span th:text="${item.getRecoveredCases()}"></span>
-                </td>
-            </tr>
+                <tr th:each="item : ${dataList}">
+                    <th scope="row">
+                        <a th:text="${item.getCounty()}"></a>
+                    </th>
+                    <td>
+                        <span th:text="${item.getConfirmedCases()}"></span>
+                    </td>
+                    <td>
+                        <span th:text="${item.getDeaths()}"></span>
+                    </td>
+                    <td>
+                        <span th:text="${item.getHospitalized()}"></span>
+                    </td>
+                    <td>
+                        <span th:text="${item.getCriticalCases()}"></span>
+                    </td>
+                    <td>
+                        <span th:text="${item.getRecoveredCases()}"></span>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
