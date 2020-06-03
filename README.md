@@ -10,5 +10,7 @@ Technologies used:
 - Spring Data / JPA
 - Thymeleaf
 - Apache Maven
+- HTML, CSS
+- JavaScript
 
 Data Source: https://github.com/iMEdD-Lab/open-data
