@@ -33,7 +33,6 @@
         }
 
         @media (min-width: @screen-sm-min){
-
             nav li{
                 font-size: 1.7rem;
             }
@@ -72,7 +71,6 @@
             margin: auto;
             font-size: 1rem;
         }
-
     </style>
 </head>
 <body>
@@ -116,10 +114,6 @@
             </div>
         </div>
     </div>
-
-    <div class="row justify-content-md-center" style="margin-top: 20px;">
-        <h7 style="text-align: center;" class="col" th:text="'Last Updated on '+ ${timeUpdated}"></h7>
-    </div>
     -->
     <div style="height: 40px;"></div>
     <div id="table-stats" class="table-responsive-sm">
@@ -136,7 +130,6 @@
             </tr>
             </thead>
             <tbody>
-            <!--/*@thymesVar id="dataList" type="java.util.List<com.project.virus.models.Covid19Data>"*/-->
             <tr th:each="item : ${dataList}">
                 <!--
                 <th scope="row">
