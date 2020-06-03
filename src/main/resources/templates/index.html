@@ -32,31 +32,6 @@
             font-size: 1.2rem;
         }
 
-        @media (min-width: @screen-sm-min){
-            nav li{
-                font-size: 1.7rem;
-            }
-
-            #table-stats{
-                width: 75%;
-                margin: auto;
-            }
-            .status-item{
-                width: 25%;
-                text-align: center;
-                margin: 5px auto;
-                font-size: 2rem;
-            }
-            #btnTop{
-                position: fixed;
-                bottom: 45px;
-                right: 25px;
-                display: none;
-                color: white;
-                background: tomato;
-            }
-        }
-
         #btnTop{
             position: fixed;
             bottom: 45px;
@@ -169,22 +144,6 @@
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 150) {
-                $('#btnTop').show();
-            } else {
-                $('#btnTop').hide();
-            }
-        });
-        $('#btnTop').click(function () {
-            $('body,html').animate({
-                scrollTop: 0
-            }, 400);
-            return false;
-        });
-    });
-</script>
+<script src="index.js"></script>
 </body>
 </html>
