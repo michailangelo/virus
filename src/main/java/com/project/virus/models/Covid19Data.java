@@ -6,9 +6,6 @@ import java.io.Serializable;
 
 public class Covid19Data implements Serializable {
 
-    //@CsvBindByName
-    //private String country;
-
     @CsvBindByName
     private String region;
 
@@ -29,11 +26,7 @@ public class Covid19Data implements Serializable {
 
     @CsvBindByName
     private Integer recoveredCases;
-/*
-    public String getCountry() {
-        return country;
-    }
-*/
+
     public String getRegion() {
         return region;
     }
