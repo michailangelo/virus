@@ -4,7 +4,7 @@ import com.opencsv.bean.CsvBindByName;
 
 import java.io.Serializable;
 
-public class Covid19Data implements Serializable {
+public class Covid19Data implements Serializable, Comparable<Covid19Data> {
 
     @CsvBindByName
     private String region;
@@ -66,5 +66,13 @@ public class Covid19Data implements Serializable {
                 ", criticalCases=" + criticalCases +
                 ", recoveredCases=" + recoveredCases +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Covid19Data o) {
+        if (getCounty() == null || o.getCounty() == null) {
+            return 0;
+        }
+        return getCounty().compareTo(o.getCounty());
     }
 }

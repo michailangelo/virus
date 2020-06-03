@@ -12,6 +12,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -39,7 +40,8 @@ public class VirusServiceImpl implements VirusService {
                     .build();
 
             // convert `CsvToBean` object to list of data
-             dataList = csvToBean.parse();
+            dataList = csvToBean.parse();
+            Collections.sort(dataList);
         }
     }
 
