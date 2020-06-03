@@ -12,11 +12,10 @@
     <link rel="icon" href="/virus" type="image/x-icon">
     <style>
         body{
-            font-family: 'Cairo', sans-serif;
+            font-family: Garamond, serif;
         }
         a{
             color: #7986cb;
-
             text-decoration: none;
         }
         a:hover{
@@ -33,21 +32,7 @@
             font-size: 1.2rem;
         }
 
-        @keyframes heart {
-            from, to { color: black }
-            50% { color: tomato; }
-        }
-
         @media (min-width: @screen-sm-min){
-
-            #love{
-                animation: heart 1s step-end infinite;
-            }
-
-            @keyframes heart {
-                from, to { color: black }
-                50% { color: tomato; }
-            }
 
             nav li{
                 font-size: 1.7rem;
@@ -83,7 +68,7 @@
         }
 
         #table-stats{
-            width: 100%;
+            width: 60%;
             margin: auto;
             font-size: 1rem;
         }
@@ -141,7 +126,7 @@
         <table align="center" class="table table-striped table-light">
             <thead>
             <tr>
-                <th scope="col">Region</th>
+                <!--<th scope="col">Region</th>-->
                 <th scope="col">County</th>
                 <th scope="col">Confirmed</th>
                 <th scope="col">Deceased</th>
@@ -153,9 +138,11 @@
             <tbody>
             <!--/*@thymesVar id="dataList" type="java.util.List<com.project.virus.models.Covid19Data>"*/-->
             <tr th:each="item : ${dataList}">
+                <!--
                 <th scope="row">
                     <a th:text="${item.getRegion()}"></a>
                 </th>
+                -->
                 <th scope="row">
                     <a th:text="${item.getCounty()}"></a>
                 </th>
