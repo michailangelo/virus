@@ -2,8 +2,8 @@
 
 package com.project.virus.controllers;
 
-import com.project.virus.models.Covid19Data;
-import com.project.virus.services.VirusService;
+import com.project.virus.models.TotalCases;
+import com.project.virus.services.HomeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,17 +12,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.List;
 
 @Controller
-public class VirusController {
+public class HomeController {
 
     @Autowired
-    VirusService virusService;
+    HomeService homeService;
 
     @GetMapping("/")
     public String index(Model model){
 
-        List<Covid19Data> dataList = virusService.getDataList();
+        List<TotalCases> totalDataList = homeService.getTotalDataList();
 
-        model.addAttribute("dataList", dataList);
+        model.addAttribute("totalDataList", totalDataList);
 
         return "index";
     }

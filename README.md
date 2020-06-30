@@ -12,5 +12,6 @@ Technologies used:
 - Apache Maven
 - HTML, CSS
 - JavaScript
+- JSON
 
-Data Source: https://github.com/iMEdD-Lab/open-data
+Data Source: https://covid-19-greece.herokuapp.com/
